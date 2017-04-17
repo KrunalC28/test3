@@ -1,0 +1,45 @@
+                            <form>
+                            <div class="form-group" [class.has-error]="firstname.invalid && firstname.dirty">
+                                <label class="control-label">First Name</label>
+                                <input #firstname="ngModel" type="text" name="firstname" class="form-control" id="name" placeholder="First Name" [(ngModel)]="user.firstname">
+                            </div>
+                            <div *ngIf="firstname.invalid && firstname.dirty" class="alert alert-danger">
+                                First Name is required.
+                            </div>
+                            <div class="form-group" [class.has-error]="lastname.invalid && lastname.dirty">
+                                <label class="control-label">Last Name</label>
+                                <input #lastname="ngModel" type="text" name="lastname" class="form-control" id="name" placeholder="Last Name" [(ngModel)]="user.lastname">
+                            </div>
+                            <div *ngIf="lastname.invalid && lastname.dirty" class="alert alert-danger">
+                                Last Name is required.
+                            </div>
+                            <div class="form-group" [class.has-error]="username.invalid && username.dirty">
+                                <label class="control-label">User Name</label>
+                                <input #username="ngModel" type="text" name="username" class="form-control" id="username" placeholder="User Name" [(ngModel)]="user.username">
+                            </div>
+                            <div *ngIf="username.invalid && username.dirty" class="alert alert-danger">
+                                Username is required.
+                            </div>
+                            <div class="form-group" [class.has-error]="password.invalid && password.dirty">
+                                <label class="control-label">Password</label>
+                                <input #password="ngModel" type="password" name="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="user.password">
+                            </div>
+                            <div *ngIf="password.invalid && password.dirty" class="alert alert-danger">
+                                Password is required.
+                            </div>
+                            <div class="form-group" [class.has-error]="cpassword.invalid && cpassword.dirty">
+                                <label class="control-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="cpassword" placeholder="Reenter Password">
+                            </div>
+                            <div *ngIf="cpassword.invalid && cpassword.dirty" class="alert alert-danger">
+                                Confirm Password is required.
+                            </div>
+                            <div class="form-group" [class.has-error]="role.invalid && role.dirty">
+                                <label for="role" class="control-label">Role</label>
+                                <input #role="ngModel" type="text" name="role" class="form-control" id="role" placeholder="Role (Admin/Trainee/Trainer)" [(ngModel)]="user.role">
+                            </div>
+                            <div *ngIf="role.invalid && role.dirty" class="alert alert-danger">
+                                Role is required.
+                            </div>                                                        
+                            <button type="submit" class="btn btn-primary" (click)="register()">Register</button>
+                            </form>

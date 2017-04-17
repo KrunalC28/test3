@@ -1,0 +1,36 @@
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                       <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion3" href="#filterPanel3">User Details</a>
+                             <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion3" href="#filterPanel3">
+                                <i class="glyphicon glyphicon-chevron-down"></i>
+                             </span>
+                       </h4>
+                     </div>
+                     <div id="filterPanel3" class="panel-collapse panel-collapse collapse">
+                        <div class="panel-body">
+                            <filter-text (changed)="search($event)"></filter-text>
+                            <hr/>
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th> Username </th>
+                                            <th> First Name </th>
+                                            <th> Last Name </th>
+                                            <th> Role </th>
+                                            <th> IsActive </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let user of users">
+                                            <td>{{user.username}}</td>
+                                            <td>{{user.firstname}}</td>
+                                            <td>{{user.lastname}}</td>
+                                            <td contenteditable="true" (input)="update($event,user.id)">{{user.role}}</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </div>
