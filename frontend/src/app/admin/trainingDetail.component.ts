@@ -6,12 +6,13 @@ import { User } from '../shared/user';
 import { AdminService } from './admin.service';
 
 @Component({
-  selector: 'user-details',
-  templateUrl: './userdetails.component.html'
+    moduleId: module.id,
+    selector: 'training-details',
+    templateUrl: 'trainingDetail.component.html'
 })
 
-export class UserDetailsComponent implements OnInit {
-  users: User[];
+export class TrainingDetailsComponent implements OnInit {
+    users: User[];
 
   constructor(private adminService: AdminService) { }
   ngOnInit(): void {
@@ -62,5 +63,4 @@ export class UserDetailsComponent implements OnInit {
       (err) => console.log(err)
     );
   }
-
 }

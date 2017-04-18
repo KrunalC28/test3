@@ -6,11 +6,13 @@ import { User } from '../shared/user';
 import { AdminService } from './admin.service';
 
 @Component({
-  selector: 'my-signup',
-  templateUrl: './newUser.component.html'
+    moduleId: module.id,
+    selector: 'new-training',
+    templateUrl: 'newTraining.component.html'
 })
-export class NewUserComponent implements OnInit {
-  userForm: FormGroup;
+
+export class NewTrainingComponent implements OnInit {
+    userForm: FormGroup;
   user: User = {username: '', firstname: '', lastname: '', password: '', role: '', isActive: '' };
 
   constructor(private fb: FormBuilder, private adminService: AdminService) { }

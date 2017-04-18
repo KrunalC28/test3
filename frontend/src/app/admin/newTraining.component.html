@@ -1,13 +1,13 @@
 <div class="panel panel-default">
    <div class="panel-heading">
         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion2" href="#filterPanel2">New User</a>
-            <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion2" href="#filterPanel2">
+            <a data-toggle="collapse" data-parent="#accordion2" href="#trainingPanel2">New Training Session</a>
+            <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion2" href="#trainingPanel2">
                 <i class="glyphicon glyphicon-chevron-down"></i>
             </span>
         </h4>
     </div>
-    <div id="filterPanel2" class="panel-collapse panel-collapse collapse"> 
+    <div id="trainingPanel2" class="panel-collapse panel-collapse collapse"> 
         <div class="panel-body">
             <form
                 novalidate autocomplete="off"
@@ -17,7 +17,7 @@
                         [ngClass]="{'has-error': (userForm.get('firstname').touched 
                                     || userForm.get('firstname').dirty) 
                                     && !userForm.get('firstname').valid }">
-                        <label for="firstNameId">First Name</label>
+                        <label for="firstNameId">Training Topic</label>
 
                         <div>
                             <input class="form-control" 
@@ -41,7 +41,7 @@
                         [ngClass]="{'has-error': (userForm.get('lastname').touched 
                                     || userForm.get('lastname').dirty) 
                                     && !userForm.get('lastname').valid }">
-                        <label for="lastNameId">Last Name</label>
+                        <label for="lastNameId">Target Audience</label>
 
                         <div>
                             <input class="form-control" 
@@ -65,7 +65,7 @@
                         [ngClass]="{'has-error': (userForm.get('username').touched 
                                     || userForm.get('username').dirty) 
                                     && !userForm.get('username').valid }">
-                        <label for="lastNameId">User Name</label>
+                        <label for="lastNameId">Start Time</label>
 
                         <div>
                             <input class="form-control" 
@@ -89,7 +89,7 @@
                         [ngClass]="{'has-error': (userForm.get('password').touched 
                                     || userForm.get('password').dirty) 
                                     && !userForm.get('password').valid }">
-                        <label for="passwordId">Password</label>
+                        <label for="passwordId">End Time</label>
 
                         <div>
                             <input class="form-control" 
@@ -112,7 +112,7 @@
                         [ngClass]="{'has-error': (userForm.get('cpassword').touched 
                                     || userForm.get('cpassword').dirty) 
                                     && !userForm.get('cpassword').valid }">
-                        <label for="cpasswordId">Confirm Password</label>
+                        <label for="cpasswordId">Trainer</label>
 
                         <div>
                             <input class="form-control" 
@@ -135,7 +135,7 @@
                         [ngClass]="{'has-error': (userForm.get('role').touched 
                                     || userForm.get('role').dirty) 
                                     && !userForm.get('role').valid }">
-                        <label for="roleId">Role</label>
+                        <label for="roleId">Scenarios</label>
 
                         <div>
                             <input class="form-control" 

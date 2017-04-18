@@ -30,4 +30,20 @@ export class AdminService {
         return this.http.get(this.url+'users/'+searchText)
             .map((response:Response) => response.json());
     }
+
+    updateRole(role:any){
+        let body = JSON.stringify(role);
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+        return this.http.post(this.url+'updateRole',role)
+            .map((response:Response) => response.json());
+    }
+
+    updateStatus(status:any){
+        let body = JSON.stringify(status);
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+        return this.http.post(this.url+'updateStatus',status)
+            .map((response:Response) => response.json());
+    }
 }
